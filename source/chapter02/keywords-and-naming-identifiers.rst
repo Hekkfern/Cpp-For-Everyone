@@ -1,5 +1,5 @@
 ####################################
-2.5 Keywords and naming identifiers
+Keywords and naming identifiers
 ####################################
 
 Keywords

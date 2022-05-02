@@ -1,5 +1,5 @@
 ###################################################
-4.4 Fixed-width integers and size_t
+Fixed-width integers and size_t
 ###################################################
 
 Why isn't the size of the integer variables fixed?

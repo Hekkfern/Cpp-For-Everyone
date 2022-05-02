@@ -1,5 +1,5 @@
 ###################################################
-4.1 C++ Built-in Primitive Types
+C++ Built-in Primitive Types
 ###################################################
 
 Bits, bytes, and memory addressing

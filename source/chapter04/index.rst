@@ -1,5 +1,6 @@
-4. Types
-============================
+#######
+Types
+#######
 
 .. toctree::
    :maxdepth: 1
@@ -11,3 +12,5 @@
    fixed-width-integers-and-size-t.rst
    floating-point-numbers.rst
    boolean-values.rst
+   implicit-type-conversion.rst
+   explicit-type-conversion.rst

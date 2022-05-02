@@ -1,5 +1,5 @@
 ###################################################
-4.5 Floating point numbers
+Floating point numbers
 ###################################################
 
 Introduction

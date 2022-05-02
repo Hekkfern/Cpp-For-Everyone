@@ -1,5 +1,5 @@
 ###############
-2.1 Statements
+Statements
 ###############
 
 A computer program is a sequence of instructions that tell the computer what to do. A statement is a type of instruction that causes the program to perform some action.

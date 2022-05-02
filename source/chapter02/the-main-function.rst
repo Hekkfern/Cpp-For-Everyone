@@ -1,5 +1,5 @@
 ####################################
-2.3 The main() function
+The main() function
 ####################################
 
 The main function is a special function. Every C++ program must contain a function named main. It serves as the entry point for the program. The computer will start running the code from the beginning of the main function.

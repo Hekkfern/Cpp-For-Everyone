@@ -1,5 +1,5 @@
 ###################################################
-3.3 Uninitialized variables and undefined behavior
+Uninitialized variables and undefined behavior
 ###################################################
 
 Uninitialized variables

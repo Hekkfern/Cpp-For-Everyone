@@ -1,5 +1,6 @@
-3. Variables and constants
-============================
+############################
+Variables and constants
+############################
 
 .. toctree::
    :maxdepth: 1

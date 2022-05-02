@@ -1,5 +1,5 @@
 ################################################
-3.2 Variable assignment and initialization
+Variable assignment and initialization
 ################################################
 
 Variable assignment

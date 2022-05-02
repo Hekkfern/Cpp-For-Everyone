@@ -1,5 +1,5 @@
 ################
-3.1 Variables
+Variables
 ################
 
 Data

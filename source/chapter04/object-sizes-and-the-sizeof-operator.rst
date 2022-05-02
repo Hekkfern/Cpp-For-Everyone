@@ -1,5 +1,5 @@
 ###################################################
-4.3 Object sizes and the sizeof operator
+Object sizes and the sizeof operator
 ###################################################
 
 Object sizes
