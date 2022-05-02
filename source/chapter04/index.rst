@@ -9,3 +9,5 @@
    integer-signedness.rst
    object-sizes-and-the-sizeof-operator.rst
    fixed-width-integers-and-size-t.rst
+   floating-point-numbers.rst
+   boolean-values.rst
