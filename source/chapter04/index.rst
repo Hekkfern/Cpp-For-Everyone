@@ -15,3 +15,4 @@ Types
    implicit-type-conversion.rst
    explicit-type-conversion.rst
    standard-conversions.rst
+   type-deduction-for-objects-using-the-auto-keyword.rst

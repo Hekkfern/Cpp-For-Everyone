@@ -27,3 +27,5 @@ Functions that return boolean values should be named starting with the word *is*
 Avoid const casts and reinterpret casts unless you have a very good reason to use them.
 
 Avoid using C-style casts. Favor static_cast when you need to convert a value from one type to another type.
+
+Favor explicit return types over function return type deduction for normal functions.
