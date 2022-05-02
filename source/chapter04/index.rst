@@ -14,3 +14,4 @@ Types
    boolean-values.rst
    implicit-type-conversion.rst
    explicit-type-conversion.rst
+   standard-conversions.rst

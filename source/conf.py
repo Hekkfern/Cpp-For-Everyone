@@ -17,7 +17,8 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -70,3 +71,8 @@ html_title = "C++ For All"
 
 html_show_copyright = False
 html_show_sphinx = False
+
+# -- Extensions configuration ----------------------------
+
+autosectionlabel_prefix_document = True
+autosectionlabel_maxdepth = 2
