@@ -3,14 +3,14 @@
 ################
 
 Data
-======
+********************
 
 **Data** is any information that can be moved, processed, or stored by a computer.
 
 Data on a computer is typically stored in a format that is efficient for storage or processing (and is thus not human readable).
 
 Objects and Variables
-======================
+***********************
 
 All computers have memory, called **RAM** (short for random access memory), that is available for the programs to use. RAM memory can be imagined as a series of numbered mailboxes that can each be used to hold a piece of data while the program is running. A single piece of data, stored in memory somewhere, is called a **value**.
 
@@ -21,7 +21,7 @@ In C++, direct memory access is not allowed. Instead, memory is accessed indirec
 Objects can be named or unnamed (anonymous). A named object is called a **variable**, and the name of the object is called an **identifier**.
 
 Variable instantiation
-=======================
+***********************
 
 In order to create a variable, a special kind of declaration statement called a **definition** is used.
 

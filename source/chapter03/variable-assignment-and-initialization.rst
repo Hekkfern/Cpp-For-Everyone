@@ -3,7 +3,7 @@
 ################################################
 
 Variable assignment
-====================
+********************
 
 After a variable has been defined, you can give it a value (in a separate statement) using the = operator. This process is called **copy assignment** (or just **assignment**) for short.
 
@@ -21,7 +21,7 @@ When a new value is assigned to a variable, the value that was there previously 
     One of the most common mistakes is to confuse the assignment operator (=) with the equality operator (==). Assignment (=) is used to assign a value to a variable. Equality (==) is used to test whether two operands are equal in value.
 
 Initialization
-====================
+********************
 
 One downside of assignment is that it requires at least two statements: one to define the variable, and one to assign the value.
 
@@ -38,7 +38,7 @@ There are 4 basic ways to initialize variables in C++:
     int d { 7 }; // initializer in braces
 
 Copy initialization
-====================
+********************
 
 When an initializer is provided after an equals sign, this is called **copy initialization**. Copy initialization was inherited from the C language.
 
@@ -51,7 +51,7 @@ Much like copy assignment, this copies the value on the right-hand side of the e
 For simple types like int, copy initialization is efficient. However, when types get more complex, copy initialization can be inefficient.
 
 Direct initialization
-======================
+***********************
 
 When an initializer is provided inside parenthesis, this is called direct initialization.
 
@@ -62,7 +62,7 @@ When an initializer is provided inside parenthesis, this is called direct initia
 For simple data types (like int), copy and direct initialization are essentially the same. For more complicated types, direct initialization tends to be more efficient than copy initialization.
 
 Brace initialization
-======================
+**********************
 
 Unfortunately, direct initialization can not be used for all types of initialization (such as initializing an object with a list of data). To provide a more consistent initialization mechanism, there is **brace initialization** (also called **uniform initialization** or **list initialization**) that uses curly braces.
 
@@ -86,7 +86,7 @@ Brace initialization has the added benefit of disallowing “narrowing” conver
 With brace initialization, the example above will cause the compiler to issue an error (which is generally a good thing).
 
 Value initialization and zero initialization
-=============================================
+*********************************************
 
 When a variable is initialized with empty braces, **value initialization** takes place. In most cases, **value initialization** will initialize the variable to zero (or empty, if that is more appropriate for a given type). In such cases where zeroing occurs, this is called **zero initialization**.
 
@@ -95,7 +95,7 @@ When a variable is initialized with empty braces, **value initialization** takes
     int width {}; // zero initialization to value 0
 
 Initializing multiple variables
-=============================================
+********************************
 
 Multiple variables can also be defined on the same line:
 

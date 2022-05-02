@@ -7,6 +7,7 @@
 
    chapter02/index.rst
    chapter03/index.rst
+   chapter04/index.rst
    glossary.rst
 
 

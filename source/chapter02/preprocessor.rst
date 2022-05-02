@@ -3,7 +3,7 @@
 ################
 
 Introduction
-===============
+********************
 
 The preprocessors are the directives, which give instructions to the compiler to preprocess the information before actual compilation starts.
 
@@ -16,7 +16,7 @@ Each directive occupies one line. The only way a preprocessor directive can exte
 There are number of preprocessor directives supported by C++ like ``#include``, ``#define``, ``#if``, ``#else``, ``#line``, etc.
 
 The #define directive
-==============================
+***********************
 
 The ``#define`` preprocessor directive creates symbolic constants. The symbolic constant is called a macro and the general form of the directive is:
 
@@ -37,7 +37,7 @@ You can use ``#define`` to define a macro which will take argument as follows:
 It generates a sort of function (Function-Like Macros) which is substituted before the program is compiled.
 
 Conditional compilation
-==============================
+************************
 
 There are several directives, which can be used to compile selective portions of the program's source code. This process is called "conditional compilation".
 
@@ -63,7 +63,7 @@ The ``#if`` clause allows preprocessor to access its content if the associated s
 On the other hand, ``#ifndef`` clause means "if not defined", so preprocessor is going to execute its content if that variable has not already been created.
 
 The #include directive
-==============================
+***********************
 
 When the preprocessor finds an #include directive it replaces it by the entire content of the specified header or file.
 
@@ -80,7 +80,7 @@ In the first case, a header is specified between angle-brackets ``<>``. This is 
 The syntax used in the second ``#include`` uses quotes, and includes a file. The file is searched for in an implementation-defined manner, which generally includes the current path. In the case that the file is not found, the compiler interprets the directive as a header inclusion, just as if the quotes (``""``) were replaced by angle-brackets (``<>``).
 
 The #error directive
-==============================
+*********************
 
 This directive aborts the compilation process when it is found, generating a compilation error that can be specified as its parameter:
 
@@ -92,7 +92,7 @@ This directive aborts the compilation process when it is found, generating a com
     #endif
 
 Predefined macros
-==============================
+********************
 
 There are some macros that are generated automatically during the translation, and can be used:
 

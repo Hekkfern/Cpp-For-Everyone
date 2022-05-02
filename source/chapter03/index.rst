@@ -7,3 +7,6 @@
 
    variables.rst
    variable-assignment-and-initialization.rst
+   uninitialized-variables-and-undefined-behavior.rst
+   literals.rst
+   constants.rst

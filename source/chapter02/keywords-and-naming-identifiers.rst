@@ -3,7 +3,7 @@
 ####################################
 
 Keywords
-===============
+********************
 
 C++ reserves a set of 92 words (as of C++20) for its own use. These words are called **keywords** (or reserved words), and each of these keywords has a special meaning within the C++ language.
 
@@ -62,7 +62,7 @@ C++ also defines special identifiers: override, final, import, and module. These
 Because keywords and special identifiers have special meaning, IDE (Integrated development environment) softwares will likely change the text color of these words to make them stand out from other identifiers.
 
 Identifiers
-===============
+********************
 
 The name of a variable (or function, type, or other kind of item) is called an identifier. C++ gives a lot of flexibility to name identifiers.However, there are a few rules that must be followed when naming identifiers:
 
