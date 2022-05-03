@@ -8,3 +8,6 @@ Glossary
 
     OOP
         Object-oriented programming.
+
+    IDE
+        Integrated development environment.

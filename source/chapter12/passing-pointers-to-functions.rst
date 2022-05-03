@@ -1,3 +1,3 @@
 ##############################
-Type deduction for functions
+Passing Pointers to Functions
 ##############################

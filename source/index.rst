@@ -11,6 +11,7 @@ Table of contents
    :name: chapterstoc
    :numbered: 3
 
+   chapter01/index.rst
    chapter02/index.rst
    chapter03/index.rst
    chapter04/index.rst
@@ -36,7 +37,6 @@ Table of contents
    chapter24/index.rst
    chapter25/index.rst
    chapter26/index.rst
-   chapter27/index.rst
 
 .. toctree::
    :maxdepth: 1
@@ -45,6 +45,8 @@ Table of contents
    :numbered: 3
 
    annex01/index.rst
+   annex02/index.rst
+   annex03/index.rst
 
 .. toctree::
    :maxdepth: 1
