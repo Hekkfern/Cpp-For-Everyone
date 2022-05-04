@@ -52,7 +52,7 @@ pipenv install --dev
 
 ```bash
 pipenv shell
-sphinx-autobuild docs docs/_build/html
+sphinx-autobuild source build/html
 ```
 
 6. Open a web browser and go to http://127.0.0.1:8000/.
