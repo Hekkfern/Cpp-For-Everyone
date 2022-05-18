@@ -7,10 +7,11 @@ Operators
    :caption: Contents:
 
    what-is-an-operator.rst
+   operator-precedence.rst
    assignment-operator.rst
    arithmetic-operators.rst
    increment-and-decrement-operators.rst
+   conditional-operator.rst
    relational-operators.rst
    logical-operators.rst
    compound-assignment-operators.rst
-   operator-precedence.rst

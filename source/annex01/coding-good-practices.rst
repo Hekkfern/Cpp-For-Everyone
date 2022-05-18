@@ -29,3 +29,11 @@ Avoid const casts and reinterpret casts unless you have a very good reason to us
 Avoid using C-style casts. Favor static_cast when you need to convert a value from one type to another type.
 
 Favor explicit return types over function return type deduction for normal functions.
+
+Use parentheses to make it clear how a non-trivial expression should evaluate (even if they are technically unnecessary). In order to reduce mistakes and make your code easier to understand without referencing a precedence table, it's a good idea to parenthesize any non-trivial compound expression, so it's clear what your intent is.
+
+Strongly favor the prefix version of the increment and decrement operators, as they are generally more performant, and you're less likely to run into strange issues with them.
+
+Always parenthesize the conditional part of the conditional operator (``?:``), and consider parenthesizing the whole thing as well.
+
+Only use the conditional operator (``?:``) for simple conditionals where you use the result and where it enhances readability.
