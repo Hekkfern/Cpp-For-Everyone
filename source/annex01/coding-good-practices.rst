@@ -37,3 +37,9 @@ Strongly favor the prefix version of the increment and decrement operators, as t
 Always parenthesize the conditional part of the conditional operator (``?:``), and consider parenthesizing the whole thing as well.
 
 Only use the conditional operator (``?:``) for simple conditionals where you use the result and where it enhances readability.
+
+Don't add unnecessary == or != to conditions. It makes them harder to read without offering any additional value.
+
+Avoid using operator== and operator!= with floating point operands.
+
+When mixing logical AND and logical OR in a single expression, explicitly parenthesize each operation to ensure they evaluate how you intend.
