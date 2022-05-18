@@ -43,3 +43,5 @@ Don't add unnecessary == or != to conditions. It makes them harder to read witho
 Avoid using operator== and operator!= with floating point operands.
 
 When mixing logical AND and logical OR in a single expression, explicitly parenthesize each operation to ensure they evaluate how you intend.
+
+To avoid surprises, use the bitwise operators with unsigned operands or std::bitset.

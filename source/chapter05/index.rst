@@ -14,4 +14,3 @@ Operators
    conditional-operator.rst
    relational-operators.rst
    logical-operators.rst
-   compound-assignment-operators.rst
