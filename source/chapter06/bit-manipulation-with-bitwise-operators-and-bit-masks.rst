@@ -114,4 +114,4 @@ Bit masks and std::bitset
 
 ``std::bitset`` supports the full set of bitwise operators. So even though it's easier to use the functions (test, set, reset, and flip) to modify individual bits, using bitwise operators and bit masks is also possible.
 
-The bitwise operators allow you to modify multiple bits at once, unlike ``std::bitset``.
+The bitwise operators allow modifying multiple bits at once, unlike ``std::bitset``.
