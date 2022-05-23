@@ -45,3 +45,5 @@ Avoid using operator== and operator!= with floating point operands.
 When mixing logical AND and logical OR in a single expression, explicitly parenthesize each operation to ensure they evaluate how you intend.
 
 To avoid surprises, use the bitwise operators with unsigned operands or std::bitset.
+
+Avoid using-directives (such as using namespace std;) at the top of your program or in header files. They violate the reason why namespaces were added in the first place.

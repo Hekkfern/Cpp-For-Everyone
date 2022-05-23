@@ -6,9 +6,8 @@ Scope
    :maxdepth: 1
    :caption: Contents:
 
-   the-scope-resolution-operator.rst
-   namespaces.rst
    compound-statements.rst
+   namespaces-and-the-scope-resolution-operator.rst
    local-variables.rst
    global-variables.rst
    variable-shadowing.rst
