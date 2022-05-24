@@ -59,3 +59,9 @@ Use of non-constant global variables should generally be avoided.
 Shadowing of local variables should generally be avoided, as it can lead to inadvertent errors where the wrong variable is used or modified.
 
 Do not use the ``inline`` keyword to request inline expansion for your functions.
+
+Consider putting single statements associated with an if or else in blocks (``{ }``).
+
+Prefer ``switch statements`` over ``if-else`` chains when there is a choice.
+
+In ``switch statements``, each set of statements underneath a label should end in a ``break statement`` or a ``return statement``.
