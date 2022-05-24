@@ -44,7 +44,7 @@ Only declarations and definition statements can appear in the global namespace. 
 Defining custom namespaces
 *****************************
 
-C++ allows developers to define their own namespaces via the ``namespace`` keyword. Namespaces that are created this way are called **user-defined namespaces**. 
+C++ allows developers to define their own namespaces via the ``namespace`` keyword. Namespaces that are created this way are called **user-defined namespaces**.
 
 Namespaces provided by C++ (such as the ``global namespace``) or by libraries (such as ``namespace std``) are not considered user-defined namespaces.
 
@@ -109,7 +109,7 @@ If an identifier inside a namespace is used and no scope resolution is provided,
 The using directive
 ********************
 
-Another way to access identifiers inside a namespace is to use a *using directive* statement. 
+Another way to access identifiers inside a namespace is to use a *using directive* statement.
 
 A **using directive** allows us to access the names in a namespace without using a namespace prefix.
 
@@ -130,7 +130,7 @@ So in the above example, when the compiler goes to determine what identifier ``c
 Nested namespaces
 ******************
 
-Namespaces can be nested inside other namespaces. 
+Namespaces can be nested inside other namespaces.
 
 For example:
 
@@ -179,6 +179,8 @@ Namespace aliases
 
 Because typing the fully qualified name of a variable or function inside a nested namespace can be painful, C++ allows creating **namespace aliases**, which allow shortening temporarily a long sequence of namespaces into something shorter.
 
+The way to create an alias is by means of the ``namespace`` keyword and the use of the same nomenclature that is used to assign a variable.
+
 For example:
 
 .. code-block:: cpp
@@ -200,4 +202,3 @@ For example:
 
         return 0;
     } // The active alias ends here
-

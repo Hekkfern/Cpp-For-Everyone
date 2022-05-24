@@ -27,7 +27,7 @@ For a project structure like this:
 
 A suitable *Makefile* to use looks like this:
 
-.. code-block:: make
+.. code-block:: none
     :linenos:
 
     CXX      := CXX

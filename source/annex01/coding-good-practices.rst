@@ -47,3 +47,13 @@ When mixing logical AND and logical OR in a single expression, explicitly parent
 To avoid surprises, use the bitwise operators with unsigned operands or std::bitset.
 
 Avoid using-directives (such as using namespace std;) at the top of your program or in header files. They violate the reason why namespaces were added in the first place.
+
+Local variables inside the function body should be defined as close to their first use as reasonable
+
+Define variables in the most limited existing scope. Avoid creating new blocks whose only purpose is to limit the scope of variables.
+
+Consider using a `g` or `g_` prefix for global variables to help differentiate them from local variables.
+
+Use of non-constant global variables should generally be avoided.
+
+Shadowing of local variables should generally be avoided, as it can lead to inadvertent errors where the wrong variable is used or modified.
