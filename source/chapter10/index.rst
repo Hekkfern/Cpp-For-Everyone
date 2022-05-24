@@ -19,3 +19,4 @@ Functions
    inline-functions.rst
    recursive-functions.rst
    type-deduction-for-functions.rst
+   functions-and-constants.rst
