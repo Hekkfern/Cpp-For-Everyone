@@ -65,3 +65,5 @@ Consider putting single statements associated with an if or else in blocks (``{ 
 Prefer ``switch statements`` over ``if-else`` chains when there is a choice.
 
 In ``switch statements``, each set of statements underneath a label should end in a ``break statement`` or a ``return statement``.
+
+Avoid ``goto statements`` (unless the alternatives are significantly worse for code readability).
