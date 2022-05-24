@@ -57,3 +57,5 @@ Consider using a `g` or `g_` prefix for global variables to help differentiate t
 Use of non-constant global variables should generally be avoided.
 
 Shadowing of local variables should generally be avoided, as it can lead to inadvertent errors where the wrong variable is used or modified.
+
+Do not use the ``inline`` keyword to request inline expansion for your functions.

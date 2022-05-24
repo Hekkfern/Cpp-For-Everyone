@@ -1,6 +1,6 @@
-#####################
+######
 Scope
-#####################
+######
 
 .. toctree::
    :maxdepth: 1
@@ -14,3 +14,5 @@ Scope
    variable-shadowing.rst
    internal-linkage.rst
    external-linkage.rst
+   inline-functions.rst
+   functions-and-constants.rst

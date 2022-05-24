@@ -50,7 +50,7 @@ Namespaces provided by C++ (such as the ``global namespace``) or by libraries (s
 
 Namespace identifiers are typically non-capitalized.
 
-here is an example of a piece of code using namespaces:
+Here is an example of a piece of code using namespaces:
 
 .. code-block:: cpp
     :linenos:
@@ -67,6 +67,21 @@ here is an example of a piece of code using namespaces:
 It's legal to declare namespace blocks in multiple locations (either across multiple files, or multiple places within the same file). All declarations within the namespace are considered part of the namespace.
 
 When the code is separated into multiple files, it is needed to use a namespace in the header and source file.
+
+Qualified and unqualified names
+********************************
+
+A name can be either qualified or unqualified.
+
+A **qualified name** is a name that includes an associated scope. Most often, names are qualified with a namespace using the scope resolution operator (``::``). For example:
+
+.. code-block:: cpp
+    :linenos:
+
+    std::cout // identifier cout is qualified by namespace std
+    ::foo // identifier foo is qualified by the global namespace
+
+An **unqualified name** is a name that does not include a scoping qualifier.
 
 The scope resolution operator
 ******************************
@@ -126,6 +141,28 @@ A **using directive** allows us to access the names in a namespace without using
 
 So in the above example, when the compiler goes to determine what identifier ``cout`` is, it will match with ``std::cout``, which, because of the using directive, is accessible as just ``cout``.
 
+Another way is to use ``using declaration`` statement.
+
+A using declaration allows us to use an unqualified name (with no scope) as an alias for a qualified name.
+
+.. code-block:: cpp
+    :linenos:
+
+    int main()
+    {
+        using std::cout; // this using declaration tells the compiler that cout should resolve to std::cout
+        cout << "Hello world!"; // so no std:: prefix is needed here!
+
+        return 0;
+    } // the using declaration expires here
+
+Note that a separate ``using declaration``is required for each name (e.g. one for ``std::cout``, one for ``std::cin``, etc…). Although this method is less explicit than using the std:: prefix, it's generally considered safe and acceptable (when used inside a function).
+
+If a ``using declaration`` or ``using directive`` is used within a block, the names are applicable to just that block (it follows normal block scoping rules). This is a good thing, as it reduces the chances for naming collisions to occur to just within that block.
+
+If a ``using declaration`` or ``using directive`` is used in the global namespace, the names are applicable to the entire rest of the file (they have file scope).
+
+Once a ``using statement`` has been declared, there's no way to cancel or replace it with a different using statement within the scope in which it was declared.
 
 Nested namespaces
 ******************
@@ -202,3 +239,76 @@ For example:
 
         return 0;
     } // The active alias ends here
+
+Unnamed (anonymous) namespaces
+*******************************
+
+An **unnamed namespace** (also called an **anonymous namespace**) is a namespace that is defined without a name
+
+.. code-block:: cpp
+    :linenos:
+
+    namespace // unnamed namespace
+    {
+        void doSomething() // can only be accessed in this file
+        {
+            std::cout << "v1\n";
+        }
+    }
+
+    int main()
+    {
+        doSomething(); // we can call doSomething() without a namespace prefix
+
+        return 0;
+    }
+
+All content declared in an ``unnamed namespace`` is treated as if it is part of the parent namespace.
+
+This might make ``unnamed namespaces`` seem useless. But the other effect of ``unnamed namespaces`` is that all identifiers inside an ``unnamed namespace`` are treated as if they had ``internal linkage``, which means that the content of an ``unnamed namespace`` can't be seen outside of the file in which the ``unnamed namespace`` is defined.
+
+For functions, this is effectively the same as defining all functions in the ``unnamed namespace`` as ``static functions``.
+
+``Unnamed namespaces`` are typically used when you have a lot of content that you want to ensure stays local to a given file, as it's easier to cluster such content in an ``unnamed namespace`` than individually mark all declarations as ``static``.
+
+``Unnamed namespaces`` will also keep ``user-defined types`` local to the file, something for which there is no alternative equivalent mechanism to do.
+
+Inline namespaces
+*******************
+
+An **inline namespace** is a namespace that is typically used to version content. Much like an ``unnamed namespace``, anything declared inside an ``inline namespace`` is considered part of the parent namespace. However, ``inline namespaces`` don't give everything ``internal linkage``.
+
+To define an inline namespace, the ``inline`` keyword is used:
+
+.. code-block:: cpp
+    :linenos:
+
+    inline namespace v1 // declare an inline namespace named v1
+    {
+        void doSomething()
+        {
+            std::cout << "v1\n";
+        }
+    }
+
+    namespace v2 // declare a normal namespace named v2
+    {
+        void doSomething()
+        {
+            std::cout << "v2\n";
+        }
+    }
+
+    int main()
+    {
+        v1::doSomething(); // calls the v1 version of doSomething()
+        v2::doSomething(); // calls the v2 version of doSomething()
+
+        doSomething(); // calls the inline version of doSomething() (which is v1)
+
+        return 0;
+    }
+
+In the above example, callers to ``doSomething`` will get the v1 (the inline version) of ``doSomething``. Callers who want to use the newer version can explicitly call ``v2::dosomething()``.
+
+This tool preserves the function of existing programs while allowing newer programs to take advantage of newer/better variations.
