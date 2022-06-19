@@ -1,6 +1,6 @@
-#############################
+##############
 If statement
-#############################
+##############
 
 The most basic kind of conditional statement in C++ is the ``if statement``. An ``if statement`` takes the form:
 
@@ -130,7 +130,7 @@ Be careful with nesting ``if statements`` because an ``else statement`` is paire
         return 0;
     }
 
-Nested ``if statements`` can be flattened by joining ``else``and ``if``keywords:
+Nested ``if statements`` can be flattened by joining ``else`` and ``if`` keywords:
 
 .. code-block:: cpp
     :linenos:

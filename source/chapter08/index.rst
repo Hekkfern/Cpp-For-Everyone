@@ -15,3 +15,4 @@ Control Flow
    infinite-loops.rst
    nested-loops.rst
    goto-statements.rst
+   halts.rst
