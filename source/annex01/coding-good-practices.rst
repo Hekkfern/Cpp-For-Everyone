@@ -67,3 +67,7 @@ Prefer ``switch statements`` over ``if-else`` chains when there is a choice.
 In ``switch statements``, each set of statements underneath a label should end in a ``break statement`` or a ``return statement``.
 
 Avoid ``goto statements`` (unless the alternatives are significantly worse for code readability).
+
+Use ``std::string`` or ``std::string_view`` instead of C-style strings.
+
+Do not pass ``std::string`` by value, as making copies of ``std::string`` is expensive. Prefer ``std::string_view`` parameters.
