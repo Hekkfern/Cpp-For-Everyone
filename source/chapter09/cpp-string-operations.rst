@@ -26,7 +26,7 @@ Also note that ``std::string::length()`` returns an unsigned integral value (mos
 
     int length { static_cast<int>(name.length()) };
 
-The method ``size()``of the ``std::string``class generates the same result. Both functions are equal.
+The method ``size()`` of the ``std::string`` class generates the same result. Both functions are equal.
 
 In C++20, the ``std::ssize()`` function  can be used to get the length of a ``std::string`` as a signed integer:
 
@@ -52,7 +52,7 @@ Although it's possible to use ``length()`` to determine whether a string has any
 
 The capacity of a string reflects how much memory the string allocated to hold its contents. This value is measured in string characters, excluding the NULL terminator. For example, a string with capacity 8 could hold 8 characters.
 
-So, the ``capacity()``method returns the number of characters a string can hold without reallocation.
+So, the ``capacity()`` method returns the number of characters a string can hold without reallocation.
 
 .. code-block:: cpp
     :linenos:

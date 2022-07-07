@@ -9,3 +9,4 @@ Program structure
    programs-with-multiple-code-files.rst
    header-files.rst
    header-guards.rst
+   forward-declarations.rst
