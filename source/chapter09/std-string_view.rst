@@ -118,3 +118,112 @@ Because ``std::string_view`` doesn't create a copy of the string, if the viewed 
     std::cout << str.ends_with("fast!") << '\n'; // 1
 
     std::cout << str << '\n'; // Trains are fast!
+
+View modification functions
+****************************
+
+``std::string_view`` contains functions that let the users manipulate the view of the string. This allows them to change the view without modifying the viewed string. Similarly to a window with curtains: left or right curtain can be closed to reduce what the people can see.
+
+The functions for this are ``remove_prefix``, which removes characters from the left side of the view, and ``remove_suffix``, which removes characters from the right side of the view.
+
+.. code-block:: cpp
+    :linenos:
+
+    std::string_view str{ "Peach" };
+
+    // Ignore the first character.
+    str.remove_prefix(1);
+
+    std::cout << str << '\n'; // prints "each"
+
+    // Ignore the last 2 characters.
+    str.remove_suffix(2);
+
+    std::cout << str << '\n'; // prints "ea"
+
+Unlike real curtains, a ``std::string_view`` cannot be opened back up. Once you shrink the area, the only way to re-widen it is to reset the view by reassigning the source string to it again.
+
+``std::string_view`` works with non-null-terminated strings
+********************************************************
+
+Unlike C-style strings and ``std::string``, ``std::string_view`` doesn't use null terminators to mark the end of the string. Rather, it knows where the string ends because it keeps track of its length.
+
+.. code-block:: cpp
+    :linenos:
+
+    // No null-terminator.
+    char vowels[]{ 'a', 'e', 'i', 'o', 'u' };
+
+    // vowels isn't null-terminated. We need to pass the length manually.
+    // Because vowels is an array, we can use std::size to get its length.
+    std::string_view str{ vowels, std::size(vowels) };
+
+    std::cout << str << '\n'; // This is safe. std::cout knows how to print std::string_view
+
+Converting a ``std::string_view`` to a C-style string
+**************************************************
+
+Some old functions (such as the old ``strlen`` function) still expect C-style strings. To convert a ``std::string_view`` to a C-style string, first it has to be converted to a ``std::string``:
+
+.. code-block:: cpp
+    :linenos:
+
+    std::string_view sv{ "balloon" };
+
+    sv.remove_suffix(3);
+
+    // Create a std::string from the std::string_view
+    std::string str{ sv };
+
+    // Get the null-terminated C-style string.
+    auto szNullTerminated{ str.c_str() };
+
+    // Pass the null-terminated string to the function that we want to use.
+    std::cout << str << " has " << std::strlen(szNullTerminated) << " letter(s)\n";
+
+However, creating a ``std::string`` every time we want to pass a ``std::string_view`` as a C-style string is expensive, so this should be avoided if possible.
+
+Passing strings by ``const std::string&`` or ``std::string_view``?
+*******************************************************************
+
+If it is wanted to write a function that takes a string parameter, making the parameter a ``std::string_view`` is the most flexible choice, because it can work efficiently with C-style string arguments (including string literals), ``std::string`` arguments (which will implicitly convert to ``std::string_view``), and ``std::string_view`` arguments.
+
+.. code-block:: cpp
+    :linenos:
+
+    void printSV(std::string_view sv)
+    {
+        std::cout << sv << '\n';
+    }
+
+    int main()
+    {
+        std::string s{ "Hello, world" };
+        std::string_view sv { s };
+
+        printSV(s);              // ok: pass std::string
+        printSV(sv);             // ok: pass std::string_view
+        printSV("Hello, world"); // ok: pass C-style string literal
+
+        return 0;
+    }
+
+Note that ``std::string_view`` is passed by value instead of by const reference. This is because ``std::string_view`` is typically fast to copy, and pass by value is optimal for cheap to copy types.
+
+There is one case where making the parameter a ``const std::string&`` is generally better: if the function needs to call some other function that takes a C-style string or ``std::string`` parameter, then ``const std::string&`` may be a better choice, as ``std::string_view`` is not guaranteed to be null-terminated (something that C-style string functions expect) and does not efficiently convert back to a ``std::string``.
+
+Ownership issues
+*******************
+
+A ``std::string_view``'s lifetime is independent of that of the string it is viewing (meaning the string being viewed can be destroyed before the ``std::string_view`` object). If this happens, then accessing the ``std::string_view`` will cause undefined behavior.
+
+The string that a ``std::string_view`` is viewing has to have been created somewhere else. It might be a string literal that lives as long as the program does, or a ``std::string``, in which case the string lives until the ``std::string`` decides to destroy it or the ``std::string dies``.
+
+``std::string_view`` can't create any strings on its own, because it is just a view.
+
+Opening the window (kinda) via the data() function
+***************************************************
+
+The string being viewed by a ``std::string_view`` can be accessed by using the ``data()`` function, which returns a C-style string. This provides fast access to the string being viewed (as a C-string). But it should also only be used if the ``std::string_view``'s view hasn't been modified (e.g. by ``remove_prefix`` or ``remove_suffix``) and the string being viewed is null-terminated.
+
+When a ``std::string_view`` has been modified, ``data()`` doesn't always do what it is supposed to.
