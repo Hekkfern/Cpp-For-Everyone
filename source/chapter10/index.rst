@@ -20,3 +20,4 @@ Functions
    recursive-functions.rst
    type-deduction-for-functions.rst
    functions-and-constants.rst
+   callback-functions.rst
