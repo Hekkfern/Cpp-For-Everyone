@@ -56,5 +56,76 @@ One useful thing about functions is that they can be called more than once. Here
         return 0;
     }
 
-Functions calling functions calling functions
-***********************************************
+Functions calling functions
+****************************
+
+Any function can call any other function.
+
+In the following program, function ``main`` calls function ``doA``, which calls function ``doB``:
+
+.. code-block:: cpp
+    :linenos:
+
+    void doB()
+    {
+        std::cout << "In doB()\n";
+    }
+
+
+    void doA()
+    {
+        std::cout << "Starting doA()\n";
+
+        doB();
+
+        std::cout << "Ending doA()\n";
+    }
+
+    // Definition of function main()
+    int main()
+    {
+        std::cout << "Starting main()\n";
+
+        doA();
+
+        std::cout << "Ending main()\n";
+
+        return 0;
+    }
+
+Nested functions are not supported
+***********************************
+
+Unlike some other programming languages, in C++, functions cannot be defined inside other functions.
+
+The following program is not legal:
+
+.. code-block:: cpp
+    :linenos:
+
+    int main()
+    {
+        void foo() // Illegal: this function is nested inside function main()
+        {
+            std::cout << "foo!\n";
+        }
+
+        foo(); // function call to foo()
+        return 0;
+    }
+
+The proper way to write the above program is:
+
+.. code-block:: cpp
+    :linenos:
+
+    void foo() // no longer inside of main()
+    {
+        std::cout << "foo!\n";
+    }
+
+    int main()
+    {
+        foo();
+        return 0;
+    }
