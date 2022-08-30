@@ -144,7 +144,7 @@ The functions for this are ``remove_prefix``, which removes characters from the 
 Unlike real curtains, a ``std::string_view`` cannot be opened back up. Once you shrink the area, the only way to re-widen it is to reset the view by reassigning the source string to it again.
 
 ``std::string_view`` works with non-null-terminated strings
-********************************************************
+*************************************************************
 
 Unlike C-style strings and ``std::string``, ``std::string_view`` doesn't use null terminators to mark the end of the string. Rather, it knows where the string ends because it keeps track of its length.
 
@@ -161,7 +161,7 @@ Unlike C-style strings and ``std::string``, ``std::string_view`` doesn't use nul
     std::cout << str << '\n'; // This is safe. std::cout knows how to print std::string_view
 
 Converting a ``std::string_view`` to a C-style string
-**************************************************
+*******************************************************
 
 Some old functions (such as the old ``strlen`` function) still expect C-style strings. To convert a ``std::string_view`` to a C-style string, first it has to be converted to a ``std::string``:
 
@@ -184,7 +184,7 @@ Some old functions (such as the old ``strlen`` function) still expect C-style st
 However, creating a ``std::string`` every time we want to pass a ``std::string_view`` as a C-style string is expensive, so this should be avoided if possible.
 
 Passing strings by ``const std::string&`` or ``std::string_view``?
-*******************************************************************
+********************************************************************
 
 If it is wanted to write a function that takes a string parameter, making the parameter a ``std::string_view`` is the most flexible choice, because it can work efficiently with C-style string arguments (including string literals), ``std::string`` arguments (which will implicitly convert to ``std::string_view``), and ``std::string_view`` arguments.
 

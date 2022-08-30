@@ -7,7 +7,7 @@ When a user-defined function is written, it is needed to determine whether the f
 First, the function has to indicate what type of value will be returned. This is done by setting the function's **return type**, which is the type that is defined before the function's name. Note that this doesn't determine what specific value is returned; it only determines what type of value will be returned.
 
 .. note::
-Functions that return ``void`` are explored further in the lesson :ref:`void-functions`.
+    Functions that return ``void`` are explored further in the lesson :doc:`void-functions`.
 
 Second, inside the function that will return a value, we use a **return statement** to indicate the specific value being returned to the caller. The specific value returned from a function is called the **return value**. When the return statement is executed, the function exits immediately, and the return value is copied from the function back to the caller. This process is called **return by value**.
 

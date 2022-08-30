@@ -43,11 +43,11 @@ Strings can be created from a C-style string too:
         std::cout << sOutput << '\n';
     }
 
-Strings can hold numbers as well. In string form, numbers are treated as text, not as numbers, and thus they can not be manipulated as numbers (e.g. they can't be multiplied). C++ will not automatically convert strings to integer or floating point values or vice-versa (although there are ways to do it manually). So, an statement like ``std::string sFour{ 4 };``will generate an error.
+Strings can hold numbers as well. In string form, numbers are treated as text, not as numbers, and thus they can not be manipulated as numbers (e.g. they can't be multiplied). C++ will not automatically convert strings to integer or floating point values or vice-versa (although there are ways to do it manually). So, an statement like ``std::string sFour{ 4 };`` will generate an error.
 
 Whenever a ``std::string`` is initialized, a copy of the string used to initialize it is made. And whenever a ``std::string`` is passed by value to a ``std::string`` parameter, another copy is made. These copies are expensive, and should be avoided if possible.
 
-Double-quoted string literals (like ``“Hello, world!”``) are C-style strings by default (and thus, have a strange type).
+Double-quoted string literals (like ``"Hello, world!""``) are C-style strings by default (and thus, have a strange type).
 
 String literals can be created with type ``std::string`` by using a ``s`` suffix after the double-quoted string literal.
 
