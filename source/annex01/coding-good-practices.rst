@@ -73,3 +73,5 @@ Use ``std::string`` or ``std::string_view`` instead of C-style strings.
 Do not pass ``std::string`` by value, as making copies of ``std::string`` is expensive. Prefer ``std::string_view`` parameters.
 
 Prefer ``std::string_view`` over std::string when you need a read-only string, especially for function parameters.
+
+Favor explicit return types over function return type deduction for normal functions.
