@@ -98,4 +98,4 @@ Unfortunately, type deduction doesn't work for function parameters, and prior to
 In C++20, the auto keyword was extended so that the above program will compile and function correctly. However, ``auto`` is not invoking type deduction in this case. Rather, it is triggering a different feature called **function templates** that was designed to actually handle such cases.
 
 .. note::
-    Further information about **function templates** can be found in later chapter :doc:`generic-programming-with-function-templates`.
+    Further information about **function templates** can be found in later chapter :doc:`../chapter21/generic-programming-with-function-templates`.
