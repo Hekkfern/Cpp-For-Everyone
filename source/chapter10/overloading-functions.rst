@@ -104,23 +104,121 @@ Here's a simple example demonstrating this:
 How overloaded functions are differentiated
 *********************************************
 
++-----------------------+---------------------------+-----------------------------------------------------------------------------------------------+
+| Function property     | Used for differentiation  | Notes                                                                                         |
++=======================+===========================+===============================================================================================+
+| Number of parameters  | Yes                       |                                                                                               |
++-----------------------+---------------------------+-----------------------------------------------------------------------------------------------+
+| Type of parameters    | Yes                       | Excludes typedefs, type aliases, and const qualifier on value parameters. Includes ellipses.  |
++-----------------------+---------------------------+-----------------------------------------------------------------------------------------------+
+| Return type           | No                        |                                                                                               |
++-----------------------+---------------------------+-----------------------------------------------------------------------------------------------+
 
+Note that a function's return type is not used to differentiate overloaded functions.
+
+For member functions, additional function-level qualifiers are also considered:
+
++---------------------------+-----------------------+
+| Function-level qualifier  | Used for overloading  |
++===========================+=======================+
+| const or volatile         | Yes                   |
++---------------------------+-----------------------+
+| Ref-qualifiers            | Yes                   |
++---------------------------+-----------------------+
+
+As an example, a const member function can be differentiated from an otherwise identical non-const member function (even if they share the same set of parameters).
 
 Overloading based on number of parameters
 *******************************************
 
+An overloaded function is differentiated so long as each overloaded function has a different number of parameters. 
 
+For example:
 
+.. code-block:: cpp
+    :linenos:
+
+    int add(int x, int y)
+    {
+        return x + y;
+    }
+
+    int add(int x, int y, int z)
+    {
+        return x + y + z;
+    }
+
+The compiler can easily tell that a function call with two integer parameters should go to ``add(int, int)`` and a function call with three integer parameters should go to ``add(int, int, int)``.
 
 Overloading based on type of parameters
 ****************************************
 
+A function can also be differentiated so long as each overloaded function's list of parameter types is distinct. 
 
+For example, all of the following overloads are differentiated:
+
+.. code-block:: cpp
+    :linenos:
+
+    int add(int x, int y); // integer version
+    double add(double x, double y); // floating point version
+    double add(int x, double y); // mixed version
+    double add(double x, int y); // mixed version
+
+Because type aliases (or typedefs) are not distinct types, overloaded functions using type aliases are not distinct from overloads using the aliased type. 
+
+For example, all of the following overloads are not differentiated (and will result in a compile error):
+
+.. code-block:: cpp
+    :linenos:
+
+    typedef int height_t; // typedef
+    using age_t = int; // type alias
+
+    void print(int value);
+    void print(age_t value); // not differentiated from print(int)
+    void print(height_t value); // not differentiated from print(int)
+
+For parameters passed by value, the const qualifier is also not considered. Therefore, the following functions are not considered to be differentiated:
+
+.. code-block:: cpp
+    :linenos:
+
+    void print(int);
+    void print(const int); // not differentiated from print(int)
+
+Ellipsis parameters are considered to be a unique type of parameter:
+
+.. code-block:: cpp
+    :linenos:
+
+    void foo(int x, int y);
+    void foo(int x, ...); // differentiated from foo(int, int)
 
 The return type of a function is not considered for differentiation
 ********************************************************************
 
+A function's return type is not considered when differentiating overloaded functions.
 
+So, the following example is generating a compiler error:
+
+.. code-block:: cpp
+    :linenos:
+
+    int getRandomValue();
+    double getRandomValue();
+
+.. note::
+
+    This was an intentional choice, as it ensures the behavior of a function call can be determined independently of the rest of the expression, making understanding complex expressions much simpler. Put another way, which version of a function will be called can be always determined based solely on the arguments in the function call. If return values were used for differentiation, then there wouldn't be an easy syntactic way to tell which overload of a function was being called. It'd also be needed to understand how the return value was being used, which requires a lot more analysis.
+
+The best way to address this is to give the functions different names:
+
+.. code-block:: cpp
+    :linenos:
+
+    int getRandomInt();
+    double getRandomDouble();
 
 Type signature
 *****************
