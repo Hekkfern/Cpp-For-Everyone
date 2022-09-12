@@ -10,10 +10,10 @@ Functions
    function-definition.rst
    function-prototypes.rst
    function-parameters.rst
-   default-argument-values.rst
    function-return-values.rst
    void-functions.rst
    overloading-functions.rst
+   default-argument-values.rst
    passing-arrays-to-functions.rst
    pass-by-reference.rst
    inline-functions.rst
