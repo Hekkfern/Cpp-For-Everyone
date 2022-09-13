@@ -1,11 +1,12 @@
-########################
-Arrays
-########################
+###################
+Program structure
+###################
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   what-is-an-array.rst
-   multidimensional-arrays.rst
-   pointers-and-arrays.rst
+   programs-with-multiple-code-files.rst
+   header-files.rst
+   header-guards.rst
+   forward-declarations.rst
