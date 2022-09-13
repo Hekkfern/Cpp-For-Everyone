@@ -1,59 +1,100 @@
-# C++ For All
+<a name="readme-top"></a>
 
-- [C++ For All](#c-for-all)
-- [How to generate](#how-to-generate)
-- [How to develop](#how-to-develop)
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-# How to generate
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-1. Install `pipenv==2022.5.2` package for Python.
+  <h3 align="center">C++ For Everybody</h3>
 
-```bash
-python3 -m pip install pipenv==2022.5.2
-```
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</div>
 
-**NOTE**: More info about installing `pipenv` in different OS can be found in [the official repo](https://github.com/pypa/pipenv/blob/main/README.md).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-2. Install the Python packages for this project:
+## About The Project
 
-```bash
-pipenv install
-```
 
-3. Open a terminal.
-4. Inside the terminal, set the current folder as the root folder of this repository.
-5. Execute:
 
-```bash
-pipenv shell
-make html
-exit
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# How to develop
+## Usage
 
-1. Install `pipenv==2022.5.2` package for Python.
+Go to the [official webpage](http://example.com) to read the latest generated docs in its HTML version.
 
-```bash
-python3 -m pip install pipenv==2022.5.2
-```
+## Contributing
 
-**NOTE**: More info about installing `pipenv` in different OS can be found in [the official repo](https://github.com/pypa/pipenv/blob/main/README.md).
 
-2. Install the Python packages for this project:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```bash
-pipenv install --dev
-```
+## Development
 
-3. Open a terminal.
-4. Inside the terminal, set the current folder as the root folder of this repository.
-5. Execute:
+For Linux users, follow the instructions on [Develop on Linux](docs/DEVELOP_LINUX.md) document.
+For Windows users, follow the instructions on [Develop on Windows](docs/DEVELOP_WINDOWS.md) document.
 
-```bash
-pipenv shell
-sphinx-autobuild source build/html
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-6. Open a web browser and go to http://127.0.0.1:8000/.
-7. When you want to stop developing, go to the terminal and press CTRL+C to stop the server.
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
