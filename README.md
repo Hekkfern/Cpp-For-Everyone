@@ -10,23 +10,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Hekkfern/Cpp-For-Everyone">
+    <img src="source/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">C++ For Everybody</h3>
+  <h3 align="center">C++ For Everyone</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Hekkfern/Cpp-For-Everyone"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/Hekkfern/Cpp-For-Everyone">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Hekkfern/Cpp-For-Everyone/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Hekkfern/Cpp-For-Everyone/issues">Request Feature</a>
   </p>
 </div>
 
@@ -58,7 +58,7 @@
 
 ## About The Project
 
-
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,14 +87,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[contributors-shield]: https://img.shields.io/github/contributors/Hekkfern/Cpp-For-Everyone.svg?style=for-the-badge
+[contributors-url]: https://github.com/Hekkfern/Cpp-For-Everyone/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Hekkfern/Cpp-For-Everyone.svg?style=for-the-badge
+[forks-url]: https://github.com/Hekkfern/Cpp-For-Everyone/network/members
+[stars-shield]: https://img.shields.io/github/stars/Hekkfern/Cpp-For-Everyone.svg?style=for-the-badge
+[stars-url]: https://github.com/Hekkfern/Cpp-For-Everyone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Hekkfern/Cpp-For-Everyone.svg?style=for-the-badge
+[issues-url]: https://github.com/Hekkfern/Cpp-For-Everyone/issues
+[license-shield]: https://img.shields.io/github/license/Hekkfern/Cpp-For-Everyone.svg?style=for-the-badge
+[license-url]: https://github.com/Hekkfern/Cpp-For-Everyone/blob/master/LICENSE.txt
+[product-screenshot]: images/screenshot.png
