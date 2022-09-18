@@ -6,6 +6,9 @@ Pointers and References
    :maxdepth: 1
    :caption: Contents:
 
+   l-values-and-r-values.rst
+   what-is-a-reference.rst
+   type-deduction-with-pointers-references-and-const.rst
    what-is-a-pointer.rst
    how-to-use-pointers.rst
    the-stack-and-the-heap.rst
@@ -14,8 +17,5 @@ Pointers and References
    pointer-arithmetic.rst
    const-and-pointers.rst
    passing-pointers-to-functions.rst
-   returning-a-pointer-from-a-function.rst
+   returning-by-address-and-reference.rst
    potential-pointer-pitfalls.rst
-   what-is-a-reference.rst
-   l-values-and-r-values.rst
-   type-deduction-with-pointers-references-and-const.rst

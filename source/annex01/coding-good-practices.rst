@@ -75,3 +75,5 @@ Do not pass ``std::string`` by value, as making copies of ``std::string`` is exp
 Prefer ``std::string_view`` over std::string when you need a read-only string, especially for function parameters.
 
 Favor explicit return types over function return type deduction for normal functions.
+
+When defining a reference, place the ampersand next to the type (not the reference variable's name).

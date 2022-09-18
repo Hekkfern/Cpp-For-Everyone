@@ -21,6 +21,7 @@ OOP - Classes and Objects
    copy-constructor.rst
    shallow-copying-with-the-copy-constructor.rst
    deep-copying-with-the-copy-constructor.rst
+   move-semantics.rst
    move-constructor.rst
    the-this-pointer.rst
    using-const-with-classes.rst
