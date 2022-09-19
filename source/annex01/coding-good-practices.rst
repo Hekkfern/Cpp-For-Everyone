@@ -77,3 +77,5 @@ Prefer ``std::string_view`` over std::string when you need a read-only string, e
 Favor explicit return types over function return type deduction for normal functions.
 
 When defining a reference, place the ampersand next to the type (not the reference variable's name).
+
+If you want a const reference, reapply the const qualifier even when it's not strictly necessary, as it makes your intent clear and helps prevent mistakes.

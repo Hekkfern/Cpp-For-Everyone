@@ -8,7 +8,6 @@ Pointers and References
 
    l-values-and-r-values.rst
    what-is-a-reference.rst
-   type-deduction-with-pointers-references-and-const.rst
    what-is-a-pointer.rst
    how-to-use-pointers.rst
    the-stack-and-the-heap.rst
@@ -19,3 +18,4 @@ Pointers and References
    passing-pointers-to-functions.rst
    returning-by-address-and-reference.rst
    potential-pointer-pitfalls.rst
+   type-deduction-with-pointers-references-and-const.rst
