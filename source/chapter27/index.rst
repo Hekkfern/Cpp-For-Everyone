@@ -1,11 +1,9 @@
 ########################
-Arrays
+Coroutines
 ########################
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   what-is-an-array.rst
-   multidimensional-arrays.rst
-   pointers-and-arrays.rst
+   what-is-a-coroutine.rst

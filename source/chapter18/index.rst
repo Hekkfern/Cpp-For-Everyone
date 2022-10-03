@@ -1,13 +1,18 @@
 ########################
-Smart Pointers
+Polymorphism
 ########################
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   what-is-a-smart-pointer.rst
-   unique-pointers.rst
-   shared-pointers.rst
-   weak-pointers.rst
-   custom-deleters.rst
+   what-is-polymorphism.rst
+   using-a-base-class-pointer.rst
+   virtual-functions.rst
+   virtual-destructors.rst
+   using-the-override-specifier.rst
+   using-the-final-specifier.rst
+   using-base-class-references.rst
+   pure-virtual-functions-and-abstract-classes.rst
+   abstract-classes-as-interfaces.rst
+   dynamic-casting.rst

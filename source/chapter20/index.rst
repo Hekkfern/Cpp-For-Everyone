@@ -1,18 +1,19 @@
 ########################
-I/O and Streams
+Exception handling
 ########################
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   files-streams-and-io.rst
-   stream-manipulators.rst
-   stream-manipulators-boolean.rst
-   stream-manipulators-integers.rst
-   stream-manipulators-floating-point.rst
-   stream-manipulators-align-and-fill.rst
-   reading-from-a-text-file.rst
-   writing-to-a-text-file.rst
-   using-string-streams.rst
-   input-validation.rst
+   throwing-an-exception-from-a-function.rst
+   function-try-blocks.rst
+   rethrowing-exceptions.rst
+   handling-multiple-exceptions.rst
+   stack-unwinding-and-how-it-works.rst
+   uncaught-exceptions-and-catch-all-handlers.rst
+   exception-specifications-and-noexcept.rst
+   creating-user-defined-exception-classes.rst
+   class-level-exceptions.rst
+   the-cpp-std-exception-class.rst
+   using-custom-std-exception-classes.rst

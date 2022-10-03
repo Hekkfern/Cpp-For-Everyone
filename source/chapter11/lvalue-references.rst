@@ -1,5 +1,5 @@
 ###########################
-What is a reference?
+Lvalue references
 ###########################
 
 Introduction

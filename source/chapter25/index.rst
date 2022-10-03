@@ -1,14 +1,12 @@
 ########################
-Concurrency
+Enumerations
 ########################
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   basic-concepts.rst
-   threads.rst
-   mutex.rst
-   tasks-and-async.rst
-   latches-and-barriers.rst
-   atomic.rst
+   the-structure-of-an-enumeration.rst
+   unscoped-enumerations.rst
+   scoped-enumerations.rst
+   common-uses-of-enumerations.rst
