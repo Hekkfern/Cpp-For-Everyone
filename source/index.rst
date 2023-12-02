@@ -37,6 +37,7 @@ Table of contents
    chapter24/index.rst
    chapter25/index.rst
    chapter26/index.rst
+   chapter27/index.rst
 
 .. toctree::
    :maxdepth: 1
